@@ -1,1 +1,0 @@
-Sensorbins = new Mongo.Collection("sensorbins");

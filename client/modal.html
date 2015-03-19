@@ -1,0 +1,36 @@
+<template name="editModal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Bin</h4>
+                </div>
+
+                <div class="modal-body">
+		<form id="addnewschoolform">
+			<div>
+				<label>Bin Name:</label>
+				<input id="nameinputm" class="form-control" value="{{binname}}" type="text">
+			</div>
+			<div >
+				<label>Bin Capacity:</label>
+				<input id="capinputm" class="form-control" value="{{bincap}}" type="text">
+			</div>
+			<div>
+				<label>Bin Brand:</label>
+				<input id="brandinputm" class="form-control" value="{{binbrand}}" type="text">
+			</div>
+			
+		<button type="button" data-dismiss="modal" class="btn btn-warning btn pull-left">Cancel</button>   
+		<button type="button" id="submitbutton" data-dismiss="modal" class="btn btn-primary btn pull-right">Update</button>                    
+                </form> 
+                </div>
+
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

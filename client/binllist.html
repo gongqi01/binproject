@@ -1,0 +1,145 @@
+<template name="binlist">
+  <div class="panel panel-primary">
+	<div class="panel-heading">Bin List</div>
+	<div class="panel-body">
+	 <table class="table table-striped table-bordered table-hover">
+		<tbody>
+                <tr> 
+                  <th class="col-md-8 text-center">Bin Name</th>
+		  <th class="col-md-2 text-center">Action</th>
+                </tr>
+	  {{#each binnames}}
+		<tr>
+			<td name="details" id="{{_id}}" class="col-md-8 text-center">
+
+                        <h4> <a href="#">{{binname}}</a></h4>
+			{{#if display _id}}
+                        <div class="row">
+                        	<div class="col-md-6 text-left">
+                        		<ul>
+						
+                           			<li><b>Bin Capacity:</b> {{bincap}}</li>
+                           			<li><b>Bin Brand:</b> {{binbrand}}</li>
+		           			<li><b>Register Date:</b> {{regdate}}</li>
+                        		</ul>
+					
+                   		 </div>
+			</div>
+			{{/if}}
+			</td>
+			<td class="col-md-2 text-center">
+				<a href="#" id="{{_id}}edit" name="editbutton">EDIT</a> <br/>
+				<a href="#" id="{{_id}}" name="deletebutton">DELETE</a> <br/>
+				<a href="#" id="{{_id}}detail" name="detailbutton">DETAILS</a>
+			</td>
+		</tr>
+	  {{/each}}
+		</tbody>
+	  </table>
+	</div>
+		
+	<div class="panel-footer"></div>
+  </div>
+
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Register New Sensor bins</div>
+	<div class="panel-body">
+		<form id="addnewschoolform">
+		<div id="message"></div>
+		<div class="row">
+			<div class="col-md-3">
+				<label>Bin Name:</label>
+				
+				<input id="nameinput" class="form-control" placeholder="bin Name" type="text">
+				
+			</div>
+			<div class="col-md-3">
+				<label>Bin Brand:</label>
+				<input id="brandinput" class="form-control" placeholder="Bin Brand" type="text">
+			</div>
+			
+			<div class="col-md-3">
+				<label>Bin Capacity:</label>
+				<input id="capinput" class="form-control" placeholder="Bin Capacity" type="text">
+			</div>
+		</div>
+		<button type="reset" id="resetbutton" class="btn btn-warning btn-lg pull-left">Reset</button>   
+		<button type="button" id="submitbutton" class="btn btn-primary btn-lg pull-right">Add</button>                    
+                </form>                
+	</div>
+	<div class="panel-footer"></div>
+  </div>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Sensor Bins Details</div>
+                    <div class="panel-body">
+		<table class="table table-striped table-bordered table-hover">
+		<tbody>
+                <tr>
+
+		 
+		  <th class="col-md-4 text-center">Bin Name</th> 
+                  <th class="col-md-4 text-center">Location</th>
+		  <th class="col-md-4 text-center">Time</th>
+		  <th class="col-md-4 text-center">Level</th>
+                </tr>
+	  {{#each sensorbins}}
+		<tr>
+			
+			{{#each binnames}}
+				{{#if displayname ../userid binid}}
+					<td name="details" class="col-md-4 text-center">{{binname}}</td>
+				{{/if}}
+			{{/each}}
+			<td name="details" class="col-md-4 text-center">{{location}}</td>
+			<td name="details" class="col-md-4 text-center"> {{time}}</td>
+			<td name="details" class="col-md-4 text-center"> {{level}}</td>
+		</tr>
+	  {{/each}}
+		</tbody>
+	  </table>
+		</div>
+	<div class="panel-footer"></div>
+</div>
+
+  
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Add Bins Records</div>
+	<div class="panel-body">
+		<form id="addnewBinform">
+		<div id="message2"></div>
+		<div class="row">
+			<div class="col-md-3">
+				<label>Bin Name:</label>
+				<select id="selectedbinid" class="form-control">
+					{{#each binnames}}
+						<option value="{{binid}}">{{binname}}</option>
+					{{/each}}				
+				</select>
+				
+			</div>
+			<div class="col-md-3">
+				<label>Location:</label>
+				<input id="locationinput" class="form-control" placeholder="Bin Location" type="text">
+			</div>
+			
+			<div class="col-md-3">
+				<label>Time:</label>
+				<input id="timeinput" class="form-control" placeholder="Time" type="text">
+			</div>
+			<div class="col-md-3">
+				<label>level:</label>
+				<input id="levelinput" class="form-control" placeholder="Level" type="text">
+			</div>
+		</div>
+		<button type="reset" id="resetBRbutton" class="btn btn-warning btn-lg pull-left">Reset</button>   
+		<button type="button" id="submitBRbutton" class="btn btn-primary btn-lg pull-right">Add</button>                    
+                </form>                
+	</div>
+	<div class="panel-footer"></div>
+  </div>
+
+
+</template>

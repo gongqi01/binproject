@@ -13,15 +13,15 @@
                 <tr> 
 		  
                   <th class="col-md-4 text-center">Location</th>
-		  <th class="col-md-6 text-center">Time</th>
-		  <th class="col-md-2 text-center">Level</th>
+		  <th class="col-md-4 text-center">Time</th>
+		  <th class="col-md-4 text-center">Level</th>
                 </tr>
 	  {{#each sensorbinsID}}
 		<tr>
 			
 			<td name="details" class="col-md-4 text-center">{{location}}</td>
-			<td name="details" class="col-md-6 text-center"> {{time}}</td>
-			<td name="details" class="col-md-2 text-center"> {{level}}</td>
+			<td name="details" class="col-md-4 text-center"> {{time}}</td>
+			<td name="details" class="col-md-4 text-center"> {{level}}</td>
 		</tr>
 	  {{/each}}
 		</tbody>

@@ -1,0 +1,36 @@
+<template name="editMonitorModal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit An Bin Monitor Record</h4>
+                </div>
+
+                <div class="modal-body">
+		<form id="addnewmonitorform">
+			<div>
+				<label>Bin Location:</label>
+				<input id="locationinputm" class="form-control" value="{{location}}" type="text">
+			</div>
+			<div >
+				<label>Time:</label>
+				<input id="timeinputm" class="form-control" value="{{time}}" type="text">
+			</div>
+			<div>
+				<label>Current Level:</label>
+				<input id="levelinputm" class="form-control" value="{{level}}" type="text">
+			</div>
+			
+		<button type="button" data-dismiss="modal" class="btn btn-warning btn pull-left">Cancel</button>   
+		<button type="button" id="submitbutton" data-dismiss="modal" class="btn btn-primary btn pull-right">Update</button>                    
+                </form> 
+                </div>
+
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

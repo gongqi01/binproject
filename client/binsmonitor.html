@@ -18,10 +18,10 @@
 
 		 
 		  <th class="col-md-2 text-center">Bin Name</th> 
-                  <th class="col-md-4 text-center">Location</th>
-		  <th class="col-md-2 text-center">Time</th>
-		  <th class="col-md-2 text-center">Level</th>
-		  <th class="col-md-2 text-center">Action</th>
+                  <th class="col-md-3 text-center">Location</th>
+		  <th class="col-md-3 text-center">Time</th>
+		  <th class="col-md-1 text-center">Level</th>
+		  <th class="col-md-3 text-center">Action</th>
                 </tr>
 	  {{#each sensorbins}}
 		<tr class="warning">
@@ -31,12 +31,12 @@
 					<td name="details" class="col-md-2 text-center">{{binname}}</td>
 				{{/if}}
 			{{/each}}
-			<td name="details" class="col-md-2 text-center">{{location}}</td>
-			<td name="details" class="col-md-4 text-center"> {{time}}</td>
-			<td name="details" class="col-md-2 text-center"> {{level}}</td>
-			<td name="details" class="col-md-2 text-center"> 
-				<a id="{{_id}}edit" name="editbutton"><i class="fa fa-pencil-square-o"></i></a>
-				<a id="{{_id}}" name="deletebutton"><i class="fa fa-times"></i></a>
+			<td name="details" class="col-md-3 text-center">{{location}}</td>
+			<td name="details" class="col-md-3 text-center"> {{time}}</td>
+			<td name="details" class="col-md-1 text-center"> {{level}}</td>
+			<td name="details" class="col-md-3 text-center"> 
+				<button id="{{_id}}edit" name="editbutton" type="button" class="btn btn-success btn-xs"><i class="fa fa-pencil-square-o"></i></button>
+				<button id="{{_id}}" name="deletebutton" type="button" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
 			</td>
 		</tr>
 	  {{/each}}
@@ -88,4 +88,14 @@
             </div>
         </div>
     </section>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+<script>
+
+$('#timeinput').datetimepicker({
+dayOfWeekStart : 1,
+lang:'en',
+startDate:	'minDate'
+});
+</script>
 </template>

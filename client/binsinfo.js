@@ -38,7 +38,7 @@ if (Meteor.isClient) {
  
 
     //display details of a selected bin
-    'click td[name=details]':function (event) {
+    'click button[name=details]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
 	var oldId = Session.get("selectedID");

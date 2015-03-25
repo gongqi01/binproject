@@ -9,7 +9,13 @@ QueryBins = function () {
 InsertBins = function (binname, bincap, binbrand) {
 
 	var currentdate = new Date();
-	var cdate = currentdate.toJSON();
+	var day = currentdate.getDate();
+	var month = currentdate.getMonth() + 1;
+	var year = currentdate.getFullYear();
+	var hours = currentdate.getHours();
+	var minutes = currentdate.getMinutes();
+	var cdate = year+"/"+month+"/"+day+" "+hours+":"+minutes;
+	//var cdate = currentdate.toJSON();
 	//alert(cdate);
 	var allbins = Binnames.find().fetch();
 	var lastid = allbins[allbins.length-1].binid;

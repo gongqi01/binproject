@@ -30,13 +30,13 @@ if (Meteor.isClient) {
         }
     },
 	//delete an existing bin monitor records
-    'click a[name=deletebutton]':function (event) {
+    'click button[name=deletebutton]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
 	DeleteSensorbin(id);
     },
 	//edit the information of a selected bin monitor record
-    'click a[name=editbutton]':function (event) {
+    'click button[name=editbutton]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
 	id = id.substr(0, id.length-4)
@@ -45,9 +45,6 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.binsmonitor.rendered=function(){
-	$('#timeinput').datepicker();
-	}
 
 }
 

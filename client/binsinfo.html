@@ -21,9 +21,9 @@
                 </tr>
 	  {{#each binnames}}
 		<tr>
-			<td name="details" id="{{_id}}" class="col-md-8 text-center">
+			<td class="col-md-8 text-center" id="binshow">
 
-                        <h4> <a>{{binname}}</a></h4>
+                         <button name="details" id="{{_id}}" type="button" class="btn btn-custom-outline btn-block"><i class="fa fa-sitemap fa-fw"></i> {{binname}}<span class="beforearrow"></span></button>
 			{{#if display _id}}
                         <div class="row">
                         	<div class="col-md-8 text-left">

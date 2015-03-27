@@ -2,7 +2,7 @@ if (Meteor.isClient) {
 
   Template.binsmonitor.helpers({
     binnames: function () { 
-      return QueryAllBins();
+      return QueryAllBins;
     },
     sensorbins: function(){
 	return QuerySensorbins();

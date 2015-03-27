@@ -5,10 +5,6 @@ QueryBins = function () {
 	return  Binnames.find({createBy: currentUserId});
 }
 
-QueryAllBins = function () {	
-	return  Binnames.find();
-}
-
 
 InsertBins = function (binname, bincap, binbrand) {
 

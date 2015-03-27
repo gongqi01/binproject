@@ -1,6 +1,7 @@
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+	/*
 	Sensorbins.remove({});
 	Binnames.remove({});
 
@@ -85,5 +86,7 @@ if (Meteor.isServer) {
 
 	for(var i=0; i<sbsData.length; i++)
 		Sensorbins.insert(sbsData[i]);
+	*/
   });
+	
 }

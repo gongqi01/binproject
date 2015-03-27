@@ -51,11 +51,9 @@
                     <li class="page-scroll">
                         <a href="#binsinfo">Bins Information</a>
                     </li>
-		{{#if cadmin}}
                     <li class="page-scroll">
                         <a href="#binsmonitor">Monitor Bins</a>
                     </li>
-		{{/if}}
                     <li class="page-scroll">
                         <a href="#contact">Contact Us</a>
                     </li>

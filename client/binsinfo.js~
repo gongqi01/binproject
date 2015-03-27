@@ -2,11 +2,7 @@ if (Meteor.isClient) {
 
   Template.binsinfo.helpers({
     binnames: function () {
-	var currentUser = QueryLogin();
-	if(currentUser == "lgq@bis4.com")
-		return QueryAllBins();
-	else
-      		return QueryBins();
+      return QueryBins();
     },
     sensorbins: function(){
 	return QuerySensorbins();
